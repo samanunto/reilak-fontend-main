@@ -1,0 +1,41 @@
+.chat-container{
+    width: 100%;
+    background-color: yellowgreen;
+    display: flex;
+}
+.chat-col-left{
+    
+    background-color: rebeccapurple;
+}
+.chat-col-left-body-list-card{
+    display: flex;
+}
+.chat-col-left-body-list-card-img > img{
+    border-radius: 100%;
+}
+
+.chat-col-left-body-list-card-info-left{
+    float: left;
+}
+.chat-col-left-body-list-card-info-right{
+    float: right;
+}
+.chat-col-left-body-list-card{
+    margin: 5px;
+}
+.chat-col-right-heard{
+  width: 100%;
+  height: 20%;
+    background-color: sandybrown;
+}
+.chat-col-right{
+    width: 100%;
+    
+}
+.chat-col-right-heard-left{
+    float: left;
+    
+}
+.chat-col-right-heard-right{
+    float: right;
+}

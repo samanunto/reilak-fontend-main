@@ -1,0 +1,135 @@
+.barra_derecha {
+    position: relative;
+    width: 300px;
+}
+
+.cumpleaños {
+    background-color: #242526;
+    color: white;
+    border: 1px solid #18191A;
+    padding-bottom: 15px;
+}
+
+.card__cumpleaños {
+    padding: 10px
+}
+
+.lista__cunpleaños {
+    justify-content: center;
+}
+
+.usuario__cumpleaño-deldia {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: $fondo-contenido;
+    padding-bottom: 5px;
+}
+
+.imagen {
+    margin-left: 110px;
+    background-color: $fondo-panel;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+}
+
+.fa-user {
+    margin-top: 9px;
+    text-align: center;
+    align-items: center;
+}
+
+.cupleaños__titulo {
+    text-align: center;
+    margin-right: 20px;
+    background-color: $fondo-contenido;
+    width: 100%;
+    font-size: 20px;
+}
+
+.eventos {
+    margin-top: 10px;
+    background-color: $fondo-panel;
+    color: white;
+}
+
+.evento__fecha {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.evento__detalle {
+    display: flex;
+    margin-left: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: $fondo-contenido;
+    margin-right: 20px;
+}
+
+.fecha__cumpleaño {
+    color: $tecto-opaco;
+    font-size: 15px;
+}
+
+// PROXIMOS EVENTOS
+.proximos-eventos {
+    background-color: $fondo-panel;
+}
+
+.titulo-eventos {
+    text-align: center;
+    color: white;
+    background-color: $fondo-contenido;
+    font-size: 20px;
+}
+
+.mes-eventos {
+    color: white;
+    text-align: center;
+}
+
+.espacio-eventos {
+    padding: 5px;
+}
+
+.fondo-descripcion-eventos {
+    background-color: $fondo-contenido;
+}
+
+.descripcion-eventos {
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.numerojodido {
+    left: 0.5vh;
+    bottom: 2.8vh;
+}
+
+.dia {
+    position: relative;
+}
+
+.tit-eventos {
+    padding-top: 1vh;
+}
+
+.icono-eventos {
+    padding-top: 0.5vh;
+    right: 1vh;
+}
+
+.icono-cal {
+    left: 0.009rem;
+    position: relative;
+}
+
+.espacio-evento {
+    padding: 12px;
+}

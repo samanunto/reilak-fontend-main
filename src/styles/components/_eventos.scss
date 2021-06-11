@@ -1,0 +1,63 @@
+.container_tareas {
+    background-color: $fondo-panel;
+}
+
+.fa-pencil-alt {
+    margin: 20%;
+}
+
+.crear_tarea {
+    width: 30%;
+    height: 50%;
+    color: $texto-principal;
+    background-color: $fondo-contenido;
+    margin: 1%;
+}
+
+.listar_tarea {
+    width: 70%;
+}
+
+.titulo_tarea {
+    text-align: center
+}
+
+.row-top {
+    height: 40px;
+}
+
+.row-bot {
+    height: 40px;
+}
+
+.colorinput {
+    background-color: blanco;
+}
+
+.titulo {
+    color: $texto-principal;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-aling {
+    text-align: center;
+}
+
+.button_tarea {
+    border: none;
+    background: $iconos;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 150px;
+    outline: none;
+    color: $fondo-contenido;
+    font-weight: 500;
+    border-radius: 24px;
+    cursor: pointer;
+    &:hover {
+        background: $texto-principal;
+    }
+}
