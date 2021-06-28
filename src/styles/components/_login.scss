@@ -9,14 +9,7 @@
     width: 100vw;
 }
 
-.fa-user{
-color:$iconos;
-font-size: 2em;
-}
-.fa-key{
-    color:$iconos ;
-    font-size: 2em;
-}
+
 
 
 
@@ -38,6 +31,36 @@ font-size: 2em;
         color:$iconos;
         font-weight: 700;
         padding-bottom: 30px;
+    }
+
+    .fa-user{
+        color:$iconos ;
+        font-size: 2em;
+        position: absolute;
+        left: 5%;
+        
+        margin-top: 9%;
+        
+        
+    }
+    .fa-lock{
+        color:$iconos ;
+        font-size: 2em;
+        position: absolute;
+        left: 5%;
+        
+        margin-top: 9%;
+    }
+    
+    span{
+        position: relative;
+    }
+
+    a{
+        color: white;
+        font-weight: bold;
+        text-align:center;
+        margin: auto;
     }
 
  
@@ -78,8 +101,13 @@ font-size: 2em;
     .foterlogin{
         display: flex;
         color:$texto-principal;
+        text-align: center;
+        margin-left: 29.5%;
         .link{
             text-decoration: none;
+            text-align: center;
+            margin: auto;
+            
 
 
         }

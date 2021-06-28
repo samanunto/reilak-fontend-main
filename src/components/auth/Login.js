@@ -30,8 +30,10 @@ const handleLogin = (e) => {
           <h3 className="titulo">Reilak</h3>
 
           <div>
+            
+            <span>
             <i class="fas fa-user"></i>
-            <span> <input
+               <input
               className="texto"
               type="text"
               placeholder="Email"
@@ -42,8 +44,10 @@ const handleLogin = (e) => {
           </div>
 
           <div>
-            <i class="fas fa-key"></i>
-            <span> <input
+            
+            <span>
+            <i class="fas fa-lock"></i>
+               <input
               className="texto"
               type="password"
               placeholder="Password"
@@ -61,10 +65,10 @@ const handleLogin = (e) => {
 
           <div className="foterlogin">
             <h1 className="recuperarClave">
-              Obtener contraseña
+            
               <a href="getPassword" className="link">
                 {" "}
-                aqui{" "}
+                ¿No tienes tu clave?{" "}
               </a>{" "}
             </h1>
           </div>

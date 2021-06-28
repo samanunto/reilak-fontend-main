@@ -30,7 +30,6 @@ export const ScreenTarea = () => {
   const [formValues, setFormValues] = useState(initEvent);
 
   const handleInputChange = ({ target }) => {
-
     setFormValues({
       ...formValues,
       [target.name]: target.value,
@@ -48,8 +47,6 @@ export const ScreenTarea = () => {
   }, [activeTareas, setFormValues]);
 
   const { tareas } = useSelector((state) => state.tareas);
-
-
 
   const handleCreateTareas = (e) => {
     e.preventDefault();
@@ -69,7 +66,6 @@ export const ScreenTarea = () => {
   };
 
   const eliminarTareas = (_id) => {
-
     dispatch(tareasStartDelete(_id));
   };
 
@@ -86,29 +82,24 @@ export const ScreenTarea = () => {
   const [fechaTareas, setFechaTareas] = useState(initEvent.fecha);
 
   useEffect(() => {
-    if(fechaTareas!==new Date()){
-      initEvent.fecha=fechaTareas
-      console.log(initEvent.fecha)
+    if (fechaTareas !== new Date()) {
+      initEvent.fecha = fechaTareas;
+      console.log(initEvent.fecha);
     }
   }, [fechaTareas]);
 
   const onChangeFecha = (date) => {
     setFechaTareas(date);
-
-   
   };
 
   const tareasMarca = (id) => {
-
     const prueba = { id };
 
-
     dispatch(TareasMarcaUpdate(prueba));
-
-  }
+  };
   return (
-    <div className="main__home">
-      <div className="container_tareas">
+    <div className="main__home" >
+      <div className="container_tarea">
         <div className="crear_tarea">
           <form onSubmit={handleCreateTareas}>
             <h3 className="titulo_tarea">Crear tarea</h3>
@@ -149,86 +140,95 @@ export const ScreenTarea = () => {
             </div>
           </form>
         </div>
-        <div className="listar_tarea">
-          <div className="col datos-tabla-lu table-responsive">
-            <table class="table texto-principal">
-              <thead>
-                <tr>
-                  
-                  <th scope="col" className="t">titulo</th>
-                  <th scope="col" className="c">contenido</th>
-                  <th scope="col" className="f">fecha</th>
-                  <th scope="col" className="o">Opciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tareas.map(({ _id, titulo, contenido, fecha,  estado }, i=1) =>
-                  estado === false ? (
-                    <tr key={i }>
-                      
-                      <td>{titulo}</td>
-                      <td>{contenido}</td>
-                      <td>{moment(fecha).format("DD-MM-YYYY")}</td>
 
-                      <td>
-                        <i
-                          className="fas fa-trash"
-                          onClick={() => {
-                            eliminarTareas(_id);
-                          }}
-                        ></i>
+        <div className="listar_tarea" >
+          <div class="cards">
+            {tareas.map(({ _id, titulo, contenido, fecha, estado }, i = 1) =>
+              estado === false ? (
+                <div class="card">
+                  <div class="card__content  ">
+                    <p>{titulo}</p>
+                    <p>{contenido}</p>
+                    <p>{moment(fecha).format("DD-MM-YYYY")}</p>
+                  </div>
+                  <div class="card__info ">
+                    <div>
+                      {" "}
+                      <i
+                        class="far fa-edit"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        onClick={() => {
+                          editarTareas(_id, titulo, contenido, fecha);
+                        }}
+                      ></i>
+                    </div>
 
-                        <i
-                          class="far fa-edit"
-                          data-toggle="modal"
-                          data-target="#exampleModal"
-                          onClick={() => {
-                            editarTareas(_id, titulo, contenido, fecha);
-                          }}
-                        ></i>
-                        <i
-                          class="fas fa-times iconos-lu"
-                          data-toggle="modal"
-                          data-target="#exampleModal"
-                          onClick={() => { tareasMarca(_id) }}
-                        ></i>
-                      </td>
-                    </tr>
-                  ) : (
-                    <tr key={i} >
-                      
-                      <td className="color_estado">{titulo}</td>
-                      <td className="color_estado">{contenido}</td>
-                      <td className="color_estado">{moment(fecha).format("DD-MM-YYYY")}</td>
+                    <div>
+                      <i
+                        class="fas fa-times iconos-lu"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        onClick={() => {
+                          tareasMarca(_id);
+                        }}
+                      ></i>
+                    </div>
 
-                      <td>
-                        <i
-                          className="fas fa-trash"
-                          onClick={() => {
-                            eliminarTareas(_id);
-                          }}
-                        ></i>
+                    <div>
+                      <i
+                        className="fas fa-trash"
+                        onClick={() => {
+                          eliminarTareas(_id);
+                        }}
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div class="card " >
+                  <div class="card__content confirmado">
+                    <p>{titulo}</p>
+                    <p>{contenido}</p>
+                    <p>{moment(fecha).format("DD-MM-YYYY")}</p>
+                  </div>
+                  <div class="card__info confirmado">
+                    <div>
+                      {" "}
+                      <i
+                        class="far fa-edit"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        onClick={() => {
+                          editarTareas(_id, titulo, contenido, fecha);
+                        }}
+                      ></i>
+                    </div>
 
-                        <i
-                          class="far fa-edit"
-                          data-toggle="modal"
-                          data-target="#exampleModal"
-                          onClick={() => {
-                            editarTareas(_id, titulo, contenido, fecha);
-                          }}
-                        ></i>
-                        <i
-                          class="fas fa-check iconos-lu"
-                          data-toggle="modal"
-                          data-target="#exampleModal"
-                          onClick={() => { tareasMarca(_id) }}
-                        ></i>
-                      </td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </table>
+                    <div>
+                      <i
+                        class="fas fa-check iconos-lu"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        onClick={() => {
+                          tareasMarca(_id);
+                        }}
+                      ></i>
+                    </div>
+
+                    <div>
+                      {" "}
+                      <i
+                        className="fas fa-trash"
+                        onClick={() => {
+                          eliminarTareas(_id);
+                        }}
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>

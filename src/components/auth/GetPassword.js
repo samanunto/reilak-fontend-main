@@ -38,8 +38,9 @@ export const GetPassword = () => {
 
 
           <div>
-            <i class="fas fa-user"></i>
+            
             <span>
+            <i class="fas fa-user"></i>
               {" "}
               <input
                 className="texto1"

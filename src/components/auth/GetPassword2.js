@@ -17,8 +17,9 @@ export const GetPassword2 = () => {
             <h3 className="titulo2">Recuperar clave</h3>
   
             <div>
-              <i class="fas fa-key"></i>
+              
               <span>
+              <i class="fas fa-lock"></i>
                 {" "}
                 <input
                   className="texto"
@@ -31,8 +32,9 @@ export const GetPassword2 = () => {
               </span>
             </div>
             <div>
-              <i class="fas fa-key"></i>
+              
               <span>
+              <i class="fas fa-lock"></i>
                 {" "}
                 <input
                   className="texto"

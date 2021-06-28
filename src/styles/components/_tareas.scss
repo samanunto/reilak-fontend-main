@@ -1,11 +1,107 @@
-.container_tareas{
+
+
+
+.cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
+}
+
+.cards * {
+    box-sizing: border-box;
+   
+
+}
+
+.confirmado{
+    background-color: rgb(48, 110, 19);
+}
+
+
+.card{
+    margin: 3%;
+    
+}
+
+.card__content {
+    
+    
+    font-size: 0.9em;
+    padding: 15px;
+    background:$fondo-panel;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+ 
+}
+
+.card__content > p:first-of-type {
+    margin-top: 0;
+}
+
+.card__content > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.card__info {
+    
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555555;
+    background: $fondo-panel;
+    font-size: 0.8em;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+}
+
+.fa-trash{
+    color: aqua;
+
+}
+.fa-edit{
+    color: aqua;
+}
+
+
+
+.confirmado{
+    background-color: rgb(62, 88, 50);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container_tarea{
 
     background-color:$fondo-panel;
 
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
 
-    margin: 5%;
+    margin: 0%;
 
     display: flex;
 
@@ -47,21 +143,23 @@
 
 
     .crear_tarea{
-        width: 30%;
+        width: 25%;
         height: 50%;
         color: $texto-principal;
         background-color: $fondo-contenido;
         margin: 1%;
+        text-align: center;
     }
 
     .listar_tarea{
         overflow-y: auto;
-        width: 70%;
-        height: 80%; 
+        max-width: 75%;
+        max-height: 80%; 
         color: $texto-principal;
         background-color: $fondo-contenido;
         margin: 1%;
     }
+    
 
     .titulo_tarea{
         text-align: center
@@ -89,16 +187,16 @@
         border: none;
         background: $fondo-panel;
        // display: block;
-        margin: 5px ;
-        margin-left: 40%;
+        margin: 5% ;
+        
         text-align: center;
-        padding: 14px 10px;
-        width: 100%;
+        padding: 4% 2%;
+        width: 90%;
         outline: none;
         color: $texto-principal;
-        font-weight: 500;
-        outline: none;
-        resize: none;
+        font-weight: 500px;
+        
+       resize: none;
 
 
 
@@ -109,12 +207,13 @@
     .input_tarea{
         border: none;
         background: $fondo-panel;
-       // display: block;
+        display: block;
         margin: 5px ;
         text-align: center;
-        padding: 14px 10px;
-        width: 90%;
-        outline: none;
+        padding: 4% 2%;
+        width: 98%;
+       
+       
         color: $texto-principal;
         font-weight: 500;
         outline: none;
@@ -127,10 +226,10 @@
         border: none;
         background: $iconos;
         display: block;
-        margin: 20px auto;
+        margin: 5% auto;
         text-align: center;
-        padding: 14px 10px;
-        width: 150px;
+        padding: 4% 2%;
+        width: 50%;
         outline: none;
         color: $fondo-contenido;
         font-weight: 500;
